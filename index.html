@@ -1,0 +1,169 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Roboto+Mono");
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+body {
+  color: #555;
+  background: #222;
+  text-align: center;
+  font-family: "Roboto Mono";
+  padding: 1em;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+.flip {
+  position: relative;
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-duration: 0.5s;
+  transition-property: transform, opacity;
+}
+.flip > .front {
+  transform: rotateY(0deg);
+}
+.flip > .back {
+  position: absolute;
+  opacity: 0;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+}
+.flip:hover > .front {
+  transform: rotateY(180deg);
+}
+.flip:hover > .back {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+.flip.flip-vertical > .back {
+  transform: rotateX(-180deg);
+}
+.flip.flip-vertical:hover > .front {
+  transform: rotateX(180deg);
+}
+.flip.flip-vertical:hover > .back {
+  transform: rotateX(0deg);
+}
+
+.flip {
+  position: relative;
+  display: inline-block;
+  margin-right: 2px;
+  margin-bottom: 1em;
+  width: 400px;
+}
+.flip > .front,
+.flip > .back {
+  display: block;
+  color: white;
+  width: inherit;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 220px;
+  padding: 1em 2em;
+  background: #313131;
+  border-radius: 10px;
+}
+.flip > .front p,
+.flip > .back p {
+  font-size: 0.9125rem;
+  line-height: 160%;
+  color: #999;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.04), 2px 2px rgba(0, 0, 0, 0.04), 3px 3px rgba(0, 0, 0, 0.04), 4px 4px rgba(0, 0, 0, 0.04), 0.125rem 0.125rem rgba(0, 0, 0, 0.04), 6px 6px rgba(0, 0, 0, 0.04), 7px 7px rgba(0, 0, 0, 0.04), 8px 8px rgba(0, 0, 0, 0.04), 9px 9px rgba(0, 0, 0, 0.04), 0.3125rem 0.3125rem rgba(0, 0, 0, 0.04), 11px 11px rgba(0, 0, 0, 0.04), 12px 12px rgba(0, 0, 0, 0.04), 13px 13px rgba(0, 0, 0, 0.04), 14px 14px rgba(0, 0, 0, 0.04), 0.625rem 0.625rem rgba(0, 0, 0, 0.04), 16px 16px rgba(0, 0, 0, 0.04), 17px 17px rgba(0, 0, 0, 0.04), 18px 18px rgba(0, 0, 0, 0.04), 19px 19px rgba(0, 0, 0, 0.04), 1.25rem 1.25rem rgba(0, 0, 0, 0.04);
+}
+
+    </style>
+   
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!-- horizontal -->
+
+  <div class="flip">
+    <div class="front" style="background-image: url(https://cdn3.vectorstock.com/i/1000x1000/84/07/love-background-vector-10418407.jpg)">
+       <h1 class="text-shadow">Hi ❤️</hi>
+    </div>
+    <div class="back">
+      
+       <p>All I dream about is you.</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://img.freepik.com/free-vector/two-neon-red-hearts-background-with-text-space_1017-23294.jpg)">
+       <h1 class="text-shadow">Hello 😊</hi>
+    </div>
+    <div class="back">
+       
+       <p>I so afraid to lose.</p>
+    </div>
+</div>
+<div class="flip">
+    <div class="front" style="background-image: url(https://images.pexels.com/videos/5874371/pexels-photo-5874371.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500)">
+       <h1 class="text-shadow">Umm 😳</hi>
+    </div>
+    <div class="back">
+       
+       <p>I’m not sure of anything but I’m certain that I loved you with a depth that stars cannot understand.</p>
+    </div>
+</div>
+
+<br>
+<br>
+
+<!-- vertical -->
+  
+
+<div class="flip flip-vertical">
+    <div class="front" style="background-image: url(data:image/jpeg;base64,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)">
+       <h1 class="text-shadow">I </hi>
+    </div>
+    <div class="back">
+      
+       <p>I just need you and some sunsets.</p>
+    </div>
+</div>
+<div class="flip flip-vertical">
+    <div class="front" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLGkIeI2T7S487rMQUgQ0QliXXSb86x_VSKv-u8qlQ8A&usqp=CAU&ec=48600113)">
+      
+       <h1 class="text-shadow">Love ❤️</hi>
+    </div>
+    <div class="back">
+     
+       <p>I always hope you’re looking at me while I’m looking away.</p>
+    </div>
+</div>
+<div class="flip flip-vertical">
+    <div class="front" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSeW5EkRJYRIGFt56MjYub3Nx-i_9LZjYgMDZskNnawg&usqp=CAU&ec=48600113)">
+       <h1 class="text-shadow">You</hi>
+    </div>
+    <div class="back">
+     
+       <p>I dream about you in colors that don’t exist.</p>
+    </div>
+</div>
+<!-- partial -->
+
+</body>
+</html>
